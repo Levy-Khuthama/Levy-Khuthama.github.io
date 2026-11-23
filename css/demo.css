@@ -1,0 +1,227 @@
+/* ==========================================================================
+   demo.css: the "Try SoleStock live" terminal at the end of Projects
+   The terminal stays dark in both themes (like the CLI project previews), so
+   its colours are fixed rather than theme tokens.
+   ========================================================================== */
+
+.demo-block {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.demo-heading {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.demo-intro {
+  max-width: 56ch;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 0.95em;
+}
+
+.demo [hidden] {
+  display: none !important;
+}
+
+/* ---- The terminal window ---- */
+.demo {
+  --term-bg: #211F1A;
+  --term-bar: #2A2822;
+  --term-line: #38352D;
+  --term-ink: #D8D4C4;
+  --term-dim: #8E8A7B;
+  --term-accent: #8CC5AE;
+
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--term-line);
+  border-radius: 14px;
+  background: var(--term-bg);
+  color: var(--term-ink);
+  font-family: 'SF Mono', Menlo, Consolas, 'Courier New', monospace;
+}
+
+.demo-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--term-line);
+  background: var(--term-bar);
+  color: var(--term-dim);
+  font-size: 0.76em;
+}
+
+.demo-restart {
+  padding: 4px 12px;
+  border: 1px solid var(--term-line);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--term-ink);
+  font: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.demo-restart:hover {
+  border-color: var(--term-accent);
+  color: var(--term-accent);
+}
+
+.demo-screen {
+  position: relative;
+  height: 400px;
+  padding: 16px 18px 20px;
+  overflow: auto;
+  font-size: 0.8em;
+  line-height: 1.55;
+}
+
+.demo-output {
+  margin: 0;
+  font: inherit;
+  white-space: pre;
+}
+
+.demo-line {
+  display: flex;
+  align-items: baseline;
+  white-space: pre;
+}
+
+.demo-prompt {
+  color: var(--term-accent);
+}
+
+.demo-input {
+  flex: 1;
+  min-width: 10ch;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #FFFFFF;
+  caret-color: var(--term-accent);
+  font: inherit;
+}
+
+/* ---- Start overlay (before Python has loaded) ---- */
+.demo-start {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  background: rgba(33, 31, 26, 0.88);
+  text-align: center;
+}
+
+.demo-launch {
+  padding: 11px 24px;
+  border: 0;
+  border-radius: 100px;
+  background: var(--term-accent);
+  color: #16160F;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.demo-launch:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.demo-launch:disabled {
+  opacity: 0.65;
+  cursor: progress;
+}
+
+.demo-status {
+  max-width: 38ch;
+  margin: 0;
+  color: var(--term-dim);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+}
+
+.demo[data-state="error"] .demo-status {
+  color: #E2916A;
+}
+
+/* ---- Menu shortcuts (a big help on a phone keyboard) ---- */
+.demo-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--term-line);
+  background: var(--term-bar);
+}
+
+.demo-chip {
+  padding: 6px 12px;
+  border: 1px solid var(--term-line);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--term-ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.demo-chip:hover {
+  border-color: var(--term-accent);
+  color: var(--term-accent);
+}
+
+.demo-chip b {
+  margin-right: 6px;
+  color: var(--term-accent);
+}
+
+.demo-hint {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.86em;
+}
+
+.demo-hint a {
+  margin-left: 4px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* Visually hidden, still read aloud */
+.demo-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .demo-screen {
+    height: 340px;
+    padding: 14px;
+    font-size: 0.74em;
+  }
+
+  /* 16px stops iOS zooming the page when the field is focused */
+  .demo-input {
+    font-size: 16px;
+  }
+}

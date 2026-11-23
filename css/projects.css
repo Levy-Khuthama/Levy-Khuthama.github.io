@@ -1,0 +1,320 @@
+/* ==========================================================================
+   projects.css — filter pills, project cards, terminal previews and modal
+   ========================================================================== */
+
+/* ---- Filter pills ---- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.86em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
+.filter-btn.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+
+/* ---- Grid ---- */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+/* ---- Card ---- */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card-bg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -20px var(--shadow);
+}
+
+/* js/projects.js adds .hidden when a filter excludes the card */
+.project-card.hidden {
+  display: none;
+}
+
+.project-thumb {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-thumb img {
+  transform: scale(1.06);
+}
+
+.project-cat-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  color: #fff;
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.project-cat-tag.data     { background: var(--accent); }
+.project-cat-tag.software { background: var(--coral); }
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.project-name {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1.03em;
+}
+
+.project-desc {
+  flex: 1;
+  color: var(--muted);
+  font-size: 0.92em;
+}
+
+.project-meta {
+  margin-top: 14px;
+  color: var(--muted-soft);
+  font-size: 0.82em;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  margin-top: 12px;
+  color: var(--accent);
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* ---- Terminal-style preview (for CLI projects without chart images) ---- */
+.project-thumb.term {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: #211F1A;
+}
+
+.term-window {
+  width: 100%;
+  color: #D8D4C4;
+  font-family: 'SF Mono', 'Courier New', monospace;
+  font-size: 0.72em;
+}
+
+.term-dots {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.term-dots span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.term-dots .r { background: #E0645A; }
+.term-dots .y { background: #E0AC4F; }
+.term-dots .g { background: #6FBF6E; }
+
+.term-line {
+  margin-bottom: 4px;
+  opacity: 0.9;
+}
+
+.term-line.prompt::before {
+  content: "$ ";
+  color: #7FBF6E;
+}
+
+.term-line.dim {
+  opacity: 0.55;
+}
+
+/* ---- Modal / lightbox ---- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(27, 27, 24, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  max-height: 86vh;
+  border-radius: 16px;
+  background: var(--card-bg);
+  overflow-y: auto;
+  transform: translateY(20px) scale(0.98);
+  transition: transform 0.25s ease;
+}
+
+.modal-overlay.open .modal-box {
+  transform: translateY(0) scale(1);
+}
+
+.modal-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.modal-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-thumb.term {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: #211F1A;
+}
+
+/* The terminal preview is cloned into the modal at a larger size */
+.modal-thumb.term .term-window {
+  font-size: 0.95em;
+}
+
+.modal-content {
+  padding: 28px 28px 32px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: var(--card-bg);
+  color: var(--ink);
+  font-size: 1.1em;
+  opacity: 0.92;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  opacity: 1;
+}
+
+.modal-name {
+  margin-bottom: 10px;
+  font-family: 'Fraunces', serif;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.modal-desc {
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.modal-meta {
+  color: var(--accent);
+  font-size: 0.88em;
+  font-weight: 500;
+}
+
+.modal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  padding: 9px 18px;
+  border-radius: 100px;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 0.88em;
+  font-weight: 500;
+}
+
+.modal-link:hover {
+  background: var(--accent);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card:hover {
+    transform: none;
+  }
+}

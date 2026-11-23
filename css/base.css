@@ -1,0 +1,71 @@
+/* ==========================================================================
+   base.css — design tokens, theme colours, reset and global typography
+   ========================================================================== */
+
+/* ---- Design tokens (light theme is the default) ---- */
+:root {
+  --bg: #FCFCFA;
+  --ink: #1B1B18;
+  --muted: #6E6C64;
+  --muted-soft: #9A9789;
+  --line: #E6E4DD;
+  --accent: #2F5D50;
+  --accent-soft: #E3EAE5;
+  --coral: #C4623E;
+  --coral-soft: #F3E3DA;
+  --card-bg: #FFFFFF;
+  --nav-bg: 252, 252, 250; /* RGB triplet so the nav can add its own alpha */
+  --shadow: rgba(27, 27, 24, 0.25);
+  color-scheme: light;
+}
+
+/* ---- Dark theme: same tokens, new values (toggled by js/theme.js) ---- */
+html[data-theme="dark"] {
+  --bg: #16160F;
+  --ink: #EFEBE0;
+  --muted: #A9A597;
+  --muted-soft: #736F62;
+  --line: #2D2B22;
+  --accent: #6FAE96;
+  --accent-soft: #223029;
+  --coral: #E2916A;
+  --coral-soft: #372A21;
+  --card-bg: #1D1C15;
+  --nav-bg: 22, 22, 15;
+  --shadow: rgba(0, 0, 0, 0.45);
+  color-scheme: dark;
+}
+
+/* ---- Reset ---- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---- Global typography ---- */
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

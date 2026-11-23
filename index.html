@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karabo Levy Khuthama — Portfolio</title>
+  <meta name="description" content="Karabo Khuthama: software developer and aspiring AI engineer. IT graduate, software support at InstaToll Africa, AI bootcamp with Stellenbosch University.">
+  <meta name="theme-color" content="#2F5D50">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Karabo Khuthama — Portfolio">
+  <meta property="og:description" content="Software developer and aspiring AI engineer. Projects in Python, machine learning and software support.">
+  <meta property="og:url" content="https://levy-khuthama.github.io/">
+  <meta property="og:image" content="https://levy-khuthama.github.io/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
+
+  <!-- Styles: tokens -> page frame -> hero -> sections -> projects -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/demo.css">
+
+  <!-- Applies the saved theme before first paint (no flash) -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+<div class="progress-bar" id="progress-bar"></div>
+<div class="wrap">
+
+  <div class="nav" id="nav">
+    <div class="links">
+      <a href="#experience" data-section="experience">Experience</a>
+      <a href="#about" data-section="about">About</a>
+      <a href="#projects" data-section="projects">Projects</a>
+      <a href="#skills" data-section="skills">Skills</a>
+      <a href="#education" data-section="education">Education</a>
+      <a href="#contact" data-section="contact">Contact</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg id="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg id="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="hero-eyebrow"><span class="dot"></span>Available for opportunities</div>
+    <h1>Karabo Khuthama</h1>
+    <div class="hero-subhead">Software Developer, aspiring AI Engineer.</div>
+    <p>IT graduate based in Kempton Park, Gauteng. By day I trace faults through toll lane and vehicle classification systems at InstaToll Africa; outside of that I'm training and evaluating machine learning models in Python, working toward a career in AI and software development.</p>
+
+    <div class="stats-strip">
+      <div class="stat">
+        <div class="stat-num">75%</div>
+        <div class="stat-label">Diploma average</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">9</div>
+        <div class="stat-label">Projects built</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2026</div>
+        <div class="stat-label">Started at InstaToll</div>
+      </div>
+    </div>
+    <div class="btn">
+    <a class="btn" href="assets/Karabo-Khuthama-CV.pdf" download>Download CV</a>
+    </div>
+  </div>
+
+  <section id="experience" class="reveal">
+    <div class="section-title">Experience</div>
+    <div class="section-sub">Where I've spent my time.</div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-role">Software Analyst / Software Support Intern</div>
+        <div class="job-years">2026 — Present</div>
+      </div>
+      <div class="job-company">InstaToll Africa</div>
+      <ul class="job-list">
+        <li>Troubleshoot and resolve software issues affecting toll lane and Automatic Vehicle Classification (AVC) systems.</li>
+        <li>Analyse application and system logs to investigate incidents, identify errors and determine root causes.</li>
+        <li>Support tolling software and lane systems to keep transaction processing reliable.</li>
+        <li>Generate operational and technical reports for system monitoring and incident investigation.</li>
+        <li>Prepare and transmit bank files as part of financial and transaction-processing operations.</li>
+        <li>Document incidents, findings and resolutions for technical and operational reference.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about" class="reveal about">
+    <div class="section-title">About</div>
+    <div class="section-sub">A bit more on how I got here.</div>
+    <p>I got into IT because I enjoy solving real-world problems, and I enjoy finding a smarter way to solve them even more. At <strong>InstaToll Africa</strong> that means working through toll lane and vehicle classification issues, tracing errors back through the logs and database until I find the real cause, not just the symptom, so the same problem doesn't come back.</p>
+    <p>I wanted to build the systems as well as support them, so I completed the <strong>FNB App Academy</strong> full stack development certificate in 2025.In 2026 I finished the AI bootcamp at <strong>Stellenbosch University</strong>, in partnership with HyperionDev, covering data analytics, machine learning and neural networks. The nine projects on this page came out of that work. </p>
+    <p>A diploma in IT from <strong>Vaal University of Technology</strong> and a stack of Cisco networking certifications got me here.Where I'm headed next is somewhere between the intersection of software engineering and applied AI, building smarter models that solve real problems more efficiently. Pursuing the same thing that got me into IT: finding a smarter way to solve the problem.</p>
+  </section>
+
+  <section id="projects" class="reveal">
+    <div class="section-title">Projects</div>
+    <div class="section-sub">Applied work from coursework and self-study. Click a project for a closer look.</div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="data">Data &amp; ML</button>
+      <button class="filter-btn" data-filter="software">Software</button>
+    </div>
+
+    <div class="project-grid" id="project-grid">
+
+      <div class="project-card" data-cat="data"
+        data-name="Slogan Generator and Industry Classifier"
+        data-desc="Two LSTM neural networks, built with TensorFlow/Keras and trained on about 4,300 company slogans. One writes a slogan word by word from an industry; the other predicts a slogan's industry from 136 options. I chained them to test whether a generated slogan is recognised as belonging to the industry it was written for. The results are reported as they came out: the classifier overfits (about 89% accuracy on training data against about 18% on unseen slogans), and the chained pipeline is unreliable."
+        data-meta="Python, TensorFlow/Keras, spaCy, scikit-learn"
+        data-link="https://github.com/Levy-Khuthama/Slogan-Generator-Industry-Classifier-LSTM-"
+        data-img="assets/images/slogan-classifier-accuracy.png">
+        <div class="project-thumb">
+          <span class="project-cat-tag data">Data &amp; ML</span>
+          <img src="assets/images/slogan-classifier-accuracy.png" alt="Bar chart of the industry classifier's accuracy: about 89% on training data, about 18% on unseen test data, against 8.5% for always guessing the most common industry">
+        </div>
+        <div class="project-body">
+          <div class="project-name">Slogan Generator and Industry Classifier</div>
+          <div class="project-desc">Two LSTM networks that write slogans and classify their industry.</div>
+          <div class="project-meta">Capstone project</div>
+          <a class="project-link" href="https://github.com/Levy-Khuthama/Slogan-Generator-Industry-Classifier-LSTM-" target="_blank" rel="noopener">View on GitHub &#8594;</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="data"
+        data-name="Sentiment Analysis of Amazon Reviews"
+        data-desc="An NLP capstone that labels 28,332 Amazon product reviews as positive, neutral or negative using spaCy and spaCyTextBlob polarity scores, then checks those labels against the reviewers' own star ratings on a 1,000-review sample. It reaches 74.3% accuracy and catches 80% of positive reviews, but only 30% of neutral and 16% of negative ones. The dataset is heavily skewed, with 90.2% of reviews rated four or five stars. A written report accompanies the notebook."
+        data-meta="Python, spaCy, spaCyTextBlob, pandas"
+        data-link="https://github.com/Levy-Khuthama/Sentiment-Analysis-of-Amazon-Product-Reviews"
+        data-img="assets/images/sentiment-recall-by-class.png">
+        <div class="project-thumb">
+          <span class="project-cat-tag data">Data &amp; ML</span>
+          <img src="assets/images/sentiment-recall-by-class.png" alt="Bar chart of sentiment recall by class: positive 80%, neutral 30%, negative 16%">
+        </div>
+        <div class="project-body">
+          <div class="project-name">Sentiment Analysis of Amazon Reviews</div>
+          <div class="project-desc">Labelling 28,332 product reviews with spaCy and checking them against star ratings.</div>
+          <div class="project-meta">Capstone project</div>
+          <a class="project-link" href="https://github.com/Levy-Khuthama/Sentiment-Analysis-of-Amazon-Product-Reviews" target="_blank" rel="noopener">View on GitHub &#8594;</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="data"
+        data-name="Telco Customer Churn Prediction"
+        data-desc="A machine learning project predicting which telecom customers are likely to cancel their service. I cleaned and preprocessed the dataset, then trained and compared a logistic regression model against a random forest, judging both on precision, recall, and which features actually drove churn."
+        data-meta="Python, scikit-learn, logistic regression, random forest"
+        data-link="https://github.com/Levy-Khuthama/Telco-Customer-Churn-Prediction"
+        data-img="assets/images/telco-churn-confusion-matrices.png">
+        <div class="project-thumb">
+          <span class="project-cat-tag data">Data &amp; ML</span>
+          <img src="assets/images/telco-churn-confusion-matrices.png" alt="Confusion matrices comparing logistic regression and random forest churn models">
+        </div>
+        <div class="project-body">
+          <div class="project-name">Telco Customer Churn Prediction</div>
+          <div class="project-desc">Comparing logistic regression and random forest models to predict customer churn.</div>
+          <div class="project-meta">Capstone project</div>
+          <a class="project-link" href="https://github.com/Levy-Khuthama/Telco-Customer-Churn-Prediction" target="_blank" rel="noopener">View on GitHub &#8594;</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="data"
+        data-name="Unsupervised Learning on US Crime Data"
+        data-desc="Applied PCA and clustering to the classic USArrests dataset to explore how violent crime rates and urban population density relate across all 50 states. PCA reduced four correlated features down to their main underlying patterns, and clustering grouped states with similar crime profiles."
+        data-meta="Python, scikit-learn, PCA, clustering"
+        data-link="https://github.com/Levy-Khuthama/US-Arrests-PCA-Clustering-Unsupervised-Learning-"
+        data-img="assets/images/us-crime-pca-clusters.png">
+        <div class="project-thumb">
+          <span class="project-cat-tag data">Data &amp; ML</span>
+          <img src="assets/images/us-crime-pca-clusters.png" alt="K-means clustering of US states on PCA-reduced crime data">
+        </div>
+        <div class="project-body">
+          <div class="project-name">Unsupervised Learning on US Crime Data</div>
+          <div class="project-desc">PCA and clustering to group US states by crime profile.</div>
+          <div class="project-meta">Capstone project</div>
+          <a class="project-link" href="https://github.com/Levy-Khuthama/US-Arrests-PCA-Clustering-Unsupervised-Learning-" target="_blank" rel="noopener">View on GitHub &#8594;</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="data"
+        data-name="House Price Prediction — Ames, Iowa"
+        data-desc="Built a multiple linear regression model to predict house sale prices from living area and garage area, using a public dataset of 2,930 Ames, Iowa property sales. Interpreted the coefficients directly: each extra square foot of living space added roughly $80 to predicted price, each extra square foot of garage added roughly $146."
+        data-meta="Python, scikit-learn, regression analysis"
+        data-link="https://github.com/Levy-Khuthama/Predicting-House-Prices-in-Ames-Iowa-Multiple-Linear-Regression-"
+        data-img="assets/images/ames-predicted-vs-actual.png">
+        <div class="project-thumb">
+          <span class="project-cat-tag data">Data &amp; ML</span>
+          <img src="assets/images/ames-predicted-vs-actual.png" alt="Predicted vs actual sale prices scatter plot with regression fit">
+        </div>
+        <div class="project-body">
+          <div class="project-name">House Price Prediction</div>
+          <div class="project-desc">A regression model predicting Ames, Iowa home sale prices.</div>
+          <div class="project-meta">Course project</div>
+          <a class="project-link" href="https://github.com/Levy-Khuthama/Predicting-House-Prices-in-Ames-Iowa-Multiple-Linear-Regression-" target="_blank" rel="noopener">View on GitHub &#8594;</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="data"
+        data-name="Automobile Dataset — Exploratory Analysis"
+        data-desc="Cleaned and explored a used-car dataset — removing redundant columns, duplicates, and missing values — then investigated how price relates to engine size, fuel economy, body style, and manufacturer across 193 vehicles. Found a strong positive correlation (0.89) between engine size and price, and wrote up the findings as a full report with six visualisations."
+        data-meta="Python, Pandas, Matplotlib/Seaborn"
+        data-link="https://github.com/Levy-Khuthama/Automobile-Dataset-Exploratory-Data-Analysis"
+        data-img="assets/images/automobile-price-comparison.png">
+        <div class="project-thumb">
+          <span class="project-cat-tag data">Data &amp; ML</span>
+          <img src="assets/images/automobile-price-comparison.png" alt="Bar chart comparing prices of the five most and least expensive cars">
+        </div>
+        <div class="project-body">
+          <div class="project-name">Automobile Dataset EDA</div>
+          <div class="project-desc">Exploring what drives price across 193 vehicles.</div>
+          <div class="project-meta">Course project</div>
+          <a class="project-link" href="https://github.com/Levy-Khuthama/Automobile-Dataset-Exploratory-Data-Analysis" target="_blank" rel="noopener">View on GitHub &#8594;</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="software"
+        data-name="SoleStock"
+        data-desc="A command-line inventory manager for a shoe warehouse, reworked from a bootcamp task into a tested, production-style package. Validates every input, saves changes atomically to a CSV file with a backup, reports bad rows by line number instead of crashing, and is covered by 114 automated tests with continuous integration on GitHub Actions."
+        data-meta="Python, pytest, GitHub Actions"
+        data-link="https://github.com/Levy-Khuthama/SoleStock"
+        data-img="">
+        <div class="project-thumb term">
+          <div class="term-window">
+            <div class="term-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+            <div class="term-line prompt">python solestock.py</div>
+            <div class="term-line dim">Loaded 24 shoes from inventory.txt.</div>
+            <div class="term-line">Enter the cost: cheap</div>
+            <div class="term-line dim">Invalid input. Try again.</div>
+            <div class="term-line dim">114 tests passing →</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">SoleStock</div>
+          <div class="project-desc">A tested, crash-proof CLI for managing shoe stock.</div>
+          <div class="project-meta">Bootcamp task, reworked</div>
+          <a class="project-link" href="https://github.com/Levy-Khuthama/SoleStock" target="_blank" rel="noopener">View on GitHub &#8594;</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="software"
+        data-name="Task Manager"
+        data-desc="A command-line task manager that keeps users and tasks in plain text files. It handles login and registration, task assignment, editing and completion tracking, and generates reports on completion and overdue rates for each user."
+        data-meta="Python, file I/O"
+        data-link="https://github.com/Levy-Khuthama/Task-Manager"
+        data-img="">
+        <div class="project-thumb term">
+          <div class="term-window">
+            <div class="term-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+            <div class="term-line prompt">python task_manager.py</div>
+            <div class="term-line dim">Login successful!</div>
+            <div class="term-line">r - register &nbsp; a - add task</div>
+            <div class="term-line">vm - view mine &nbsp; ds - stats</div>
+            <div class="term-line dim">Task overview report generated →</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">Task Manager</div>
+          <div class="project-desc">A text-file-backed CLI app for tracking tasks and users.</div>
+          <div class="project-meta">Capstone project, reworked</div>
+          <a class="project-link" href="https://github.com/Levy-Khuthama/Task-Manager" target="_blank" rel="noopener">View on GitHub &#8594;</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="software"
+        data-name="Bookstore Shelf Tracker"
+        data-desc="A command-line application for managing a small bookstore's inventory. Lets a user add, update, delete, and search books, automatically linking each one to an author record, with everything stored in a local SQLite database that persists between sessions."
+        data-meta="Python, SQLite"
+        data-link="https://github.com/Levy-Khuthama/Bookstore-Shelf-Tracker"
+        data-img="">
+        <div class="project-thumb term">
+          <div class="term-window">
+            <div class="term-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+            <div class="term-line prompt">python shelf_track.py</div>
+            <div class="term-line">1. Enter book &nbsp; 4. Search books</div>
+            <div class="term-line dim">Book added successfully.</div>
+            <div class="term-line dim">ebookstore.db ready →</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">Bookstore Shelf Tracker</div>
+          <div class="project-desc">A SQLite-backed CLI for managing books and authors.</div>
+          <div class="project-meta">Capstone project</div>
+          <a class="project-link" href="https://github.com/Levy-Khuthama/Bookstore-Shelf-Tracker" target="_blank" rel="noopener">View on GitHub &#8594;</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="demo-block" id="demo">
+      <div class="demo-heading">Try SoleStock live</div>
+      <p class="demo-intro">This is the real project, running in your browser. Nothing is installed and nothing you type leaves this page.</p>
+
+      <div class="demo" id="demo-app" data-state="idle">
+        <div class="demo-bar">
+          <span class="demo-title">python solestock.py</span>
+          <button type="button" class="demo-restart" id="demo-restart" hidden>Restart</button>
+        </div>
+
+        <div class="demo-screen" id="demo-screen" tabindex="0" role="region" aria-label="SoleStock demo terminal">
+          <pre class="demo-output" id="demo-output" aria-hidden="true">$ python solestock.py</pre>
+          <label class="demo-line" id="demo-line" hidden>
+            <span class="demo-prompt" id="demo-prompt"></span>
+            <input class="demo-input" id="demo-input" type="text" maxlength="120"
+                   autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+                   aria-label="Type your answer, then press Enter">
+          </label>
+
+          <div class="demo-start" id="demo-start">
+            <button type="button" class="demo-launch" id="demo-launch">Start the demo</button>
+            <p class="demo-status" id="demo-status">Downloads Python into your browser the first time (about 10 MB).</p>
+          </div>
+        </div>
+
+        <div class="demo-chips" id="demo-chips" hidden aria-label="Menu shortcuts"></div>
+
+        <!-- Screen readers hear only what is new, not the whole screen again. -->
+        <div class="demo-sr" id="demo-announce" aria-live="polite" aria-atomic="true"></div>
+      </div>
+
+      <p class="demo-hint">Try <b>3</b> to view the stock, <b>4</b> to restock the lowest item, or <b>2</b> to add a shoe. Type something invalid to see how it recovers. Changes reset when you reload the page.
+        <a href="https://github.com/Levy-Khuthama/SoleStock" target="_blank" rel="noopener">Source and tests on GitHub &#8594;</a></p>
+      <noscript><p class="demo-hint">The live demo needs JavaScript.</p></noscript>
+    </div>
+  </section>
+
+  <section id="skills" class="reveal">
+    <div class="section-title">Skills</div>
+    <div class="section-sub">What I work with.</div>
+
+    <div class="skill-chart">
+      <div class="skill-bar">
+        <div class="skill-bar-label">Software &amp; systems</div>
+        <div class="skill-bar-track"><div class="bar-fill" style="--target:100%"></div></div>
+        <div class="skill-bar-count">6</div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-bar-label">Programming</div>
+        <div class="skill-bar-track"><div class="bar-fill" style="--target:100%"></div></div>
+        <div class="skill-bar-count">6</div>
+      </div>
+       <div class="skill-bar">
+        <div class="skill-bar-label">AI &amp; ML</div>
+        <div class="skill-bar-track"><div class="bar-fill" style="--target:83%"></div></div>
+        <div class="skill-bar-count">5</div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-bar-label">Other tools</div>
+        <div class="skill-bar-track"><div class="bar-fill" style="--target:83%"></div></div>
+        <div class="skill-bar-count">5</div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-bar-label">Networking &amp; IT</div>
+        <div class="skill-bar-track"><div class="bar-fill" style="--target:67%"></div></div>
+        <div class="skill-bar-count">4</div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-bar-label">Databases</div>
+        <div class="skill-bar-track"><div class="bar-fill" style="--target:33%"></div></div>
+        <div class="skill-bar-count">2</div>
+      </div>
+    </div>
+
+    <div class="stack-row">
+      <div class="stack-label">Software &amp; systems</div>
+      <div class="stack-items">
+        <span class="chip">Troubleshooting</span><span class="chip">Toll lane systems</span><span class="chip">AVC systems</span><span class="chip">Log analysis</span><span class="chip">Incident investigation</span><span class="chip">Technical reporting</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="stack-label">Programming</div>
+      <div class="stack-items">
+        <span class="chip">Python</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">PHP</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="stack-label">Databases</div>
+      <div class="stack-items">
+        <span class="chip">JDBC</span><span class="chip">PL/SQL</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="stack-label">Networking &amp; IT</div>
+      <div class="stack-items">
+        <span class="chip">Windows environments</span><span class="chip">LAN/Wi-Fi setup</span><span class="chip">Router/switch config</span><span class="chip">IP addressing</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="stack-label">AI &amp; ML</div>
+      <div class="stack-items">
+        <span class="chip">Model training</span><span class="chip">Model evaluation</span><span class="chip">Foundational ML</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="stack-label">Other</div>
+      <div class="stack-items">
+        <span class="chip">Word</span><span class="chip">Excel</span><span class="chip">PowerPoint</span><span class="chip">Documentation</span><span class="chip">Teamwork</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="reveal">
+    <div class="section-title">Education</div>
+    <div class="section-sub">Diploma, certifications, and where they came from.</div>
+
+     <div class="edu">
+      <div class="edu-top">
+        <div class="edu-name">Artificial Intelligence</div>
+        <div class="edu-year">2026</div>
+      </div>
+      <div class="edu-school">Stellenbosch University(in Partnership with HyperionDev) — average mark 99%</div>
+      <div class="edu-detail">Three levels: Foundations, Data Analytics, and Machine Learning &amp; AI. Covered databases, data analysis, regression, classification, unsupervised learning, neural networks and natural language processing, with capstone projects shown above.</div>
+    </div>
+
+    <div class="edu">
+      <div class="edu-top">
+        <div class="edu-name">Diploma in Information Technology</div>
+        <div class="edu-year">2025</div>
+      </div>
+      <div class="edu-school">Vaal University of Technology — average mark 75%</div>
+      <div class="edu-detail">Relevant modules: Programming Logic, Development Software, Web Development, Information Systems, System Software, Business Analysis, Applied Communication Skills.</div>
+    </div>
+
+    <div class="edu">
+      <div class="edu-top">
+        <div class="edu-name">National Senior Certificate</div>
+        <div class="edu-year">2022</div>
+      </div>
+      <div class="edu-school">Hoërskool Birchleigh</div>
+    </div>
+
+
+    <div class="cert-list">
+      <div class="cert-row">
+        <div class="cert-name">FNB App Academy Certificate in Full Stack Development</div>
+        <div class="cert-year">2025</div>
+      </div>
+      <div class="cert-row">
+        <div class="cert-name">Cisco CCNA v7 — Switching, Routing and Wireless Essentials</div>
+        <div class="cert-year">2024</div>
+      </div>
+      <div class="cert-row">
+        <div class="cert-name">Cisco CCNA v7 — Introduction to Networks</div>
+        <div class="cert-year">2023</div>
+      </div>
+      <div class="cert-row">
+        <div class="cert-name">Cisco IT Essentials: PC Hardware and Software</div>
+        <div class="cert-year">2023</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <div class="section-title">Contact</div>
+    <div class="section-sub">Best ways to reach me.</div>
+
+    <div class="contact-row">
+      <div class="contact-label">Email</div>
+      <div class="contact-value">
+        <a href="mailto:k.khuthama@gmail.com">k.khuthama@gmail.com</a>
+        <button class="copy-btn" data-copy="k.khuthama@gmail.com">Copy</button>
+      </div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-label">Phone</div>
+      <div class="contact-value">
+        <a href="tel:+27684328358">+27 68 432 8358</a>
+      </div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-label">GitHub</div>
+      <div class="contact-value">
+        <a href="https://github.com/Levy-Khuthama" target="_blank" rel="noopener">github.com/Levy-Khuthama</a>
+      </div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-label">LinkedIn</div>
+      <div class="contact-value">
+        <a href="https://www.linkedin.com/in/karabo-khuthama-567ba7368/" target="_blank" rel="noopener">linkedin.com/in/karabo-khuthama-567ba7368</a>
+      </div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-label">Location</div>
+      <div class="contact-value">Kempton Park, Gauteng</div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Karabo Levy Khuthama</span>
+    <span><a href="#top">Back to top</a></span>
+  </footer>
+
+</div>
+
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <div class="modal-thumb" id="modal-thumb"></div>
+    <div class="modal-content">
+      <div class="modal-name" id="modal-name"></div>
+      <div class="modal-desc" id="modal-desc"></div>
+      <div class="modal-meta" id="modal-meta"></div>
+      <a class="modal-link" id="modal-link" target="_blank" rel="noopener">View on GitHub &#8594;</a>
+    </div>
+  </div>
+</div>
+
+
+  <script src="js/scroll.js" defer></script>
+  <script src="js/projects.js" defer></script>
+  <script src="js/modal.js" defer></script>
+  <script src="js/contact.js" defer></script>
+  <script src="js/solestock-bundle.js" defer></script>
+  <script src="js/demo.js" defer></script>
+</body>
+</html>

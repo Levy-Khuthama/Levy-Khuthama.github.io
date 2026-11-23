@@ -1,0 +1,196 @@
+/* ==========================================================================
+   hero.css — landing block: headline, subhead, blobs and stats strip
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  padding: 90px 0 110px;
+  opacity: 0;
+  transform: translateY(14px);
+  animation: rise 0.8s cubic-bezier(.2, .7, .2, 1) forwards;
+  animation-delay: 0.1s;
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Soft drifting background blobs ---- */
+.blob {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.5;
+  animation: drift 14s ease-in-out infinite;
+}
+
+.blob-a {
+  width: 320px;
+  height: 320px;
+  top: -100px;
+  right: -120px;
+  background: radial-gradient(circle, var(--accent-soft), transparent 70%);
+}
+
+.blob-b {
+  width: 260px;
+  height: 260px;
+  top: 60px;
+  left: -140px;
+  background: radial-gradient(circle, var(--coral-soft), transparent 70%);
+  animation-delay: -6s;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  50%      { transform: translate(20px, -16px); }
+}
+
+/* ---- Availability badge ---- */
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  color: var(--accent);
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.hero-eyebrow .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+
+/* ---- Headline, subhead and intro ---- */
+.hero h1 {
+  margin-bottom: 16px;
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 3.1em;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.hero-subhead {
+  max-width: 26ch;
+  margin-bottom: 22px;
+  color: var(--accent);
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.hero p {
+  max-width: 52ch;
+  color: var(--muted);
+  font-size: 1.06em;
+}
+
+/* ---- Stats strip ---- */
+.stats-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  margin-top: 40px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  color: var(--ink);
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.7em;
+  line-height: 1.1;
+}
+
+.stat-label {
+  margin-top: 4px;
+  color: var(--muted-soft);
+  font-size: 0.82em;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 560px) {
+  .hero {
+    padding: 60px 0 80px;
+  }
+
+  .hero h1 {
+    font-size: 2.2em;
+  }
+
+  .hero-subhead {
+    font-size: 1.05em;
+  }
+
+  .stats-strip {
+    gap: 26px;
+    margin-top: 30px;
+  }
+
+  .stat-num {
+    font-size: 1.4em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .blob {
+    animation: none;
+  }
+}
+
+/* ---- Download CV button ---- */
+.btn {
+  margin-top: 26px;
+}
+.btn a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 100px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.95em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn a::after {
+  content: "\2193"; /* down arrow */
+  transition: transform 0.2s ease;
+}
+.btn a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+.btn a:hover::after {
+  transform: translateY(2px);
+}
+.btn a:active {
+  transform: translateY(0);
+  box-shadow: none;
+}

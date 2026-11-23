@@ -1,0 +1,282 @@
+/* ==========================================================================
+   sections.css — Experience, About, Skills, Education and Contact
+   (Projects live in projects.css because they carry far more styling)
+   ========================================================================== */
+
+/* ---- Experience ---- */
+.job-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.job-role {
+  font-weight: 600;
+  font-size: 1.08em;
+}
+
+.job-years {
+  color: var(--muted-soft);
+  font-size: 0.88em;
+  white-space: nowrap;
+}
+
+.job-company {
+  margin-top: 4px;
+  color: var(--accent);
+  font-size: 0.95em;
+  font-weight: 500;
+}
+
+.job-list {
+  margin-top: 18px;
+  padding-left: 18px;
+}
+
+.job-list li {
+  max-width: 54ch;
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+.job-list li::marker {
+  color: var(--muted-soft);
+}
+
+/* ---- About ---- */
+.about p {
+  max-width: 58ch;
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}
+
+.about strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ---- Skills: category bar chart ---- */
+.skill-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 46px;
+}
+
+.skill-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.skill-bar-label {
+  width: 150px;
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 0.87em;
+}
+
+.skill-bar-track {
+  flex: 1;
+  height: 8px;
+  border-radius: 100px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--accent), var(--coral));
+  transition: width 1.1s cubic-bezier(.2, .7, .2, 1);
+}
+
+/* Each bar sets its own --target inline; it animates when the section reveals */
+.reveal.in .bar-fill {
+  width: var(--target);
+}
+
+.skill-bar-count {
+  width: 18px;
+  flex-shrink: 0;
+  text-align: right;
+  color: var(--muted-soft);
+  font-size: 0.82em;
+}
+
+/* ---- Skills: detailed rows and chips ---- */
+.stack-row {
+  display: flex;
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.96em;
+}
+
+.stack-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.stack-label {
+  width: 140px;
+  flex-shrink: 0;
+  color: var(--muted-soft);
+}
+
+.stack-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.86em;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.chip:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---- Education and certifications ---- */
+.edu {
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+}
+
+.edu:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.edu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.edu-name {
+  font-weight: 600;
+}
+
+.edu-year {
+  color: var(--muted-soft);
+  font-size: 0.88em;
+  white-space: nowrap;
+}
+
+.edu-school {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.96em;
+}
+
+.edu-detail {
+  max-width: 54ch;
+  margin-top: 10px;
+  color: var(--muted-soft);
+  font-size: 0.9em;
+}
+
+.cert-list {
+  margin-top: 48px;
+}
+
+.cert-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+
+.cert-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.cert-name {
+  font-size: 0.98em;
+}
+
+.cert-year {
+  color: var(--muted-soft);
+  font-size: 0.88em;
+  white-space: nowrap;
+}
+
+/* ---- Contact ---- */
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+
+.contact-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-label {
+  color: var(--muted-soft);
+  font-size: 0.9em;
+}
+
+.contact-value {
+  font-weight: 500;
+  text-align: right;
+  overflow-wrap: anywhere; /* long profile URLs wrap instead of overflowing on phones */
+}
+
+.contact-value a:hover {
+  color: var(--accent);
+}
+
+.copy-btn {
+  margin-left: 14px;
+  padding: 4px 0;
+  border: none;
+  background: none;
+  color: var(--muted-soft);
+  font-family: inherit;
+  font-size: 0.82em;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  color: var(--accent);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+  .skill-bar-label {
+    width: 108px;
+    font-size: 0.8em;
+  }
+
+  .stack-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stack-label {
+    width: auto;
+  }
+}
