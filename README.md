@@ -1,6 +1,6 @@
 # Karabo Levy Khuthama: Portfolio
 
-**Live site: https://levy-khuthama.github.io/Levy-Khuthama.github.io./**
+**Live site: https://levy-khuthama.github.io/**
 
 My personal developer portfolio: software support experience, an AI bootcamp
 with Stellenbosch University, and the projects I've built. It's a static site
